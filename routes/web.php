@@ -10,6 +10,14 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::resource('users', 'Usercontroller');
+Route::put('ajax/user-edit/{id}', 'Usercontroller@ajaxEdit');
+Route::put('ajax/user-show/{id}', 'Usercontroller@ajaxShow');
+Route::get('ajax/user-check-email', 'Usercontroller@checkEmail');
+
+
+
+
 
 Route::get('/', function () {
     return view('welcome');
